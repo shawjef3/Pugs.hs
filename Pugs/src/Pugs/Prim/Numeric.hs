@@ -124,7 +124,10 @@ op2Exp x y = do
         ('0':'.':_) -> do
             num1 <- fromVal =<< fromVal' x
             if isDigit . head $ show (num1 :: VNum)
-                then op2Rat ((^^) :: VRat -> VInt -> VRat) x y
+                then do
+                    if num2 >= 0
+                        then op2Rat ((^) :: VRat -> VInt -> VRat) x y
+                        else op2Rat ((^^) :: VRat -> VInt -> VRat) x y
                 else op2Floating (**) x y
         _ -> op2Floating (**) x y
 
