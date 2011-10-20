@@ -1,5 +1,5 @@
 {-# OPTIONS_GHC -funbox-strict-fields #-}
-{-# LANGUAGE TypeSynonymInstances, MultiParamTypeClasses, PatternGuards #-}
+{-# LANGUAGE TypeSynonymInstances, MultiParamTypeClasses, PatternGuards, FlexibleInstances #-}
 
 module Pugs.Parser.Types (
     RuleParser, RuleState(..), CharClass(..),

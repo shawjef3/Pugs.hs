@@ -1,4 +1,4 @@
-{-# LANGUAGE MultiParamTypeClasses, TypeSynonymInstances, DeriveDataTypeable, PatternGuards #-}
+{-# LANGUAGE MultiParamTypeClasses, TypeSynonymInstances, DeriveDataTypeable, PatternGuards, FlexibleInstances #-}
 
 module Pugs.Meta.Perl5 (Perl5Responder) where
 import Pugs.Val

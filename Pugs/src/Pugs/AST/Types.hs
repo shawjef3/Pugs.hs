@@ -1,4 +1,4 @@
-{-# LANGUAGE TypeSynonymInstances, DeriveDataTypeable #-}
+{-# LANGUAGE TypeSynonymInstances, DeriveDataTypeable, FlexibleInstances #-}
 module Pugs.AST.Types where
 import Pugs.Internals
 import Pugs.Types

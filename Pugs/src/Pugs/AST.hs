@@ -1,5 +1,5 @@
 {-# OPTIONS_GHC -funbox-strict-fields #-}
-{-# LANGUAGE CPP, GADTs, ScopedTypeVariables, TypeSynonymInstances, MultiParamTypeClasses, DeriveDataTypeable, FlexibleContexts, PatternGuards #-}
+{-# LANGUAGE CPP, GADTs, ScopedTypeVariables, TypeSynonymInstances, MultiParamTypeClasses, DeriveDataTypeable, FlexibleContexts, PatternGuards, FlexibleInstances #-}
 
 {-|
     Abstract syntax tree.

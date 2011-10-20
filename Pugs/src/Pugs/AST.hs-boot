@@ -1,5 +1,5 @@
 {-# OPTIONS_GHC -funbox-strict-fields #-}
-{-# LANGUAGE MultiParamTypeClasses, FlexibleContexts, TypeSynonymInstances #-}
+{-# LANGUAGE MultiParamTypeClasses, FlexibleContexts, TypeSynonymInstances, FlexibleInstances #-}
 module Pugs.AST where
 import Pugs.Internals
 import Pugs.Types

@@ -1,4 +1,4 @@
-{-# LANGUAGE TypeSynonymInstances, MultiParamTypeClasses #-}
+{-# LANGUAGE TypeSynonymInstances, MultiParamTypeClasses, FlexibleInstances #-}
 module Pugs.AST.Functions where
 import Pugs.Internals
 import Pugs.Types

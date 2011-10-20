@@ -1,4 +1,4 @@
-{-# LANGUAGE ScopedTypeVariables, TypeSynonymInstances, MultiParamTypeClasses, DeriveDataTypeable, GeneralizedNewtypeDeriving #-}
+{-# LANGUAGE ScopedTypeVariables, TypeSynonymInstances, MultiParamTypeClasses, DeriveDataTypeable, GeneralizedNewtypeDeriving, FlexibleInstances #-}
 {-|
     Perl 6 Values.
 
