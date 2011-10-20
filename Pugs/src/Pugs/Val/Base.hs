@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fallow-overlapping-instances -funbox-strict-fields -fallow-undecidable-instances #-}
+{-# OPTIONS_GHC -funbox-strict-fields #-}
 
 module Pugs.Val.Base where
 

@@ -1,5 +1,5 @@
-{-# OPTIONS_GHC -fglasgow-exts -fallow-overlapping-instances -funbox-strict-fields -fparr #-}
-{-# LANGUAGE GADTs #-}
+{-# OPTIONS_GHC -funbox-strict-fields #-}
+{-# LANGUAGE GADTs, PatternGuards #-}
 
 module Pugs.Eval.Var (
     findVar, findVarRef, findSub,

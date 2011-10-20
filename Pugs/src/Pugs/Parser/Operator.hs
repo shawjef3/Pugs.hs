@@ -1,5 +1,5 @@
-{-# OPTIONS_GHC -cpp -fglasgow-exts -funbox-strict-fields -fno-full-laziness -fno-cse -fallow-overlapping-instances -fno-warn-orphans #-}
-{-# LANGUAGE GADTs #-}
+{-# OPTIONS_GHC -funbox-strict-fields -fno-full-laziness -fno-cse #-}
+{-# LANGUAGE CPP, GADTs, MagicHash, ScopedTypeVariables, MultiParamTypeClasses, DeriveDataTypeable, GeneralizedNewtypeDeriving, PatternGuards #-}
 
 module Pugs.Parser.Operator where
 import Pugs.Internals
@@ -342,8 +342,6 @@ rightDotAssignSyn :: RuleOperator Exp
 rightDotAssignSyn = makeOp2DotAssign AssocRight "" Syn
 
 {-# INLINE ops #-}
-{-# SPECIALISE ops :: (String -> RuleOperator Exp) -> Set OpName -> [RuleOperator Exp] #-}
-{-# SPECIALISE ops :: (String -> RuleParser String) -> Set OpName -> [RuleParser String] #-}
 ops :: (String -> a) -> Set OpName -> [a]
 ops f = map f . cast . Set.toAscList
 

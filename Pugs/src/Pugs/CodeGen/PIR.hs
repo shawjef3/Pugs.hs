@@ -1,4 +1,5 @@
-{-# OPTIONS_GHC -fglasgow-exts -fallow-undecidable-instances -fno-warn-orphans -funbox-strict-fields -cpp -fallow-overlapping-instances #-}
+{-# OPTIONS_GHC -funbox-strict-fields #-}
+{-# LANGUAGE ScopedTypeVariables, MultiParamTypeClasses, FunctionalDependencies, TypeSynonymInstances, FlexibleInstances, PatternGuards #-}
 
 {-|
     This module provides 'genPIR', a function which compiles the current

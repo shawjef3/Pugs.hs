@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fallow-overlapping-instances #-}
+{-# LANGUAGE TypeSynonymInstances, FlexibleInstances, PatternGuards, DeriveDataTypeable #-}
 
 {-|
     Pretty printing for various data structures.

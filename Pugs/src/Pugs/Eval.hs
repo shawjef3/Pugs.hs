@@ -1,5 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -cpp -fno-warn-deprecations -fallow-overlapping-instances -fparr #-}
-{-# LANGUAGE GADTs #-}
+{-# LANGUAGE GADTs, ScopedTypeVariables, RankNTypes, ParallelListComp, FlexibleInstances, DeriveDataTypeable, PatternGuards #-}
 
 {-|
     Evaluation and reduction engine.

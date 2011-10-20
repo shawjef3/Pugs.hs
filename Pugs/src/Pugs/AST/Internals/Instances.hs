@@ -1,5 +1,4 @@
-{-# OPTIONS_GHC -cpp -fglasgow-exts -fno-warn-orphans -fallow-overlapping-instances -fallow-undecidable-instances -fparr #-}
-{-# LANGUAGE GADTs #-}
+{-# LANGUAGE GADTs, CPP, MagicHash, ScopedTypeVariables, PatternGuards, TypeSynonymInstances, FlexibleContexts, FlexibleInstances, UndecidableInstances, OverlappingInstances #-}
 
 
 

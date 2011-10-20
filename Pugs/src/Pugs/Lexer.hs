@@ -1,4 +1,5 @@
-{-# OPTIONS_GHC -fglasgow-exts -optc-w -cpp #-}
+{-# OPTIONS_GHC -optc-w #-}
+{-# LANGUAGE CPP #-}
 
 {-|
     Lexical analyzer.

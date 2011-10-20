@@ -1,4 +1,5 @@
-{-# OPTIONS_GHC -cpp -fglasgow-exts -fno-warn-orphans -fallow-overlapping-instances -funbox-strict-fields -fallow-undecidable-instances #-}
+{-# OPTIONS_GHC -funbox-strict-fields #-}
+{-# LANGUAGE ScopedTypeVariables, MultiParamTypeClasses, DeriveDataTypeable #-}
 
 module Pugs.AST.Eval where
 import Pugs.Internals

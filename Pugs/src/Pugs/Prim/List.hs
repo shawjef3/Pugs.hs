@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fallow-overlapping-instances #-}
+{-# LANGUAGE PatternGuards #-}
 
 module Pugs.Prim.List (
     op0Zip, op0Cross, op0Cat, op0Each, op0RoundRobin, op1Pick, op1Sum,

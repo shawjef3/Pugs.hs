@@ -1,5 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fno-warn-orphans #-}
-{-# LANGUAGE GADTs #-}
+{-# LANGUAGE GADTs, ImplicitParams, PatternGuards #-}
 
 module Pugs.Prim.Yaml ( evalYaml, dumpYaml, stableAddressOf ) where
 import Pugs.Internals

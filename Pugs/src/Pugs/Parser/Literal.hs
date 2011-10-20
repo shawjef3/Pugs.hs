@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fallow-overlapping-instances #-}
+{-# LANGUAGE DeriveDataTypeable, PatternGuards #-}
 module Pugs.Parser.Literal where
 
 import Pugs.Internals

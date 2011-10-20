@@ -1,4 +1,5 @@
-{-# OPTIONS_GHC -cpp -fglasgow-exts -fno-warn-orphans -funbox-strict-fields #-}
+{-# OPTIONS_GHC -funbox-strict-fields #-}
+{-# LANGUAGE MultiParamTypeClasses, FlexibleInstances, DeriveDataTypeable #-}
 
 module Pugs.AST.SIO (
     MonadSTM(..),
@@ -19,22 +20,20 @@ data SIO a = MkSTM !(STM a) | MkIO !(IO a) | MkSIO !a
     deriving (Typeable)
 
 {-# INLINE runSIO #-}
-{-# SPECIALISE runSIO :: SIO () -> Maybe () #-}
-{-# SPECIALISE runSIO :: SIO () -> Either String () #-}
+{-# SPECIALISE runSIO :: SIO a -> Maybe a #-}
+{-# SPECIALISE runSIO :: SIO a -> Either String a #-}
 runSIO :: Monad m => SIO a -> m a
 runSIO MkSTM{}      = fail "Unsafe STM caught in pure computation"
 runSIO MkIO{}       = fail "Unsafe IO caught in pure computation"
 runSIO (MkSIO x)    = return x
 
 {-# INLINE runSTM #-}
-{-# SPECIALISE runSTM :: SIO () -> STM () #-}
 runSTM :: SIO a -> STM a
 runSTM (MkSTM stm)  = stm
 runSTM MkIO{}       = fail "Unsafe IO caught in STM"
 runSTM (MkSIO x)    = return x
 
 {-# INLINE runIO #-}
-{-# SPECIALISE runIO :: SIO () -> IO () #-}
 runIO :: SIO a -> IO a
 runIO (MkIO io)     = io
 runIO (MkSTM stm)   = atomically stm

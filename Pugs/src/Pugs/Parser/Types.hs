@@ -1,4 +1,5 @@
-{-# OPTIONS_GHC -fglasgow-exts -funbox-strict-fields -fallow-overlapping-instances #-}
+{-# OPTIONS_GHC -funbox-strict-fields #-}
+{-# LANGUAGE TypeSynonymInstances, MultiParamTypeClasses, PatternGuards #-}
 
 module Pugs.Parser.Types (
     RuleParser, RuleState(..), CharClass(..),

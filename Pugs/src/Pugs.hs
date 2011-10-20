@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fallow-overlapping-instances -fffi #-}
+{-# LANGUAGE ForeignFunctionInterface, ImplicitParams, ScopedTypeVariables, PatternGuards #-}
 
 {-|
     Public API for the Pugs system.

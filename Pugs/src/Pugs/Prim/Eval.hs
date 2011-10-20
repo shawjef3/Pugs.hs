@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fallow-overlapping-instances #-}
+{-# LANGUAGE ScopedTypeVariables, PatternGuards #-}
 module Pugs.Prim.Eval (
     -- used by Pugs.Prim
     op1EvalHaskell, op1EvalP6Y, op1EvalFileP6Y,

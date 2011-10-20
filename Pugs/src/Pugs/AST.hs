@@ -1,5 +1,5 @@
-{-# OPTIONS_GHC -cpp -fglasgow-exts -fno-warn-orphans -funbox-strict-fields -fallow-overlapping-instances -fparr #-}
-{-# LANGUAGE GADTs #-}
+{-# OPTIONS_GHC -funbox-strict-fields #-}
+{-# LANGUAGE CPP, GADTs, ScopedTypeVariables, TypeSynonymInstances, MultiParamTypeClasses, DeriveDataTypeable, FlexibleContexts, PatternGuards #-}
 
 {-|
     Abstract syntax tree.

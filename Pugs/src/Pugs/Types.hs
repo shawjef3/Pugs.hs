@@ -1,4 +1,5 @@
-{-# OPTIONS_GHC -fglasgow-exts -fno-warn-deprecations -fno-warn-orphans -funbox-strict-fields -fallow-overlapping-instances -fparr #-}
+{-# OPTIONS_GHC -funbox-strict-fields #-}
+{-# LANGUAGE MultiParamTypeClasses, TypeSynonymInstances, FlexibleInstances, DeriveDataTypeable, PatternGuards #-}
 {-|
     Implementation Types.
 

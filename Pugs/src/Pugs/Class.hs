@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fparr -fallow-undecidable-instances -fallow-incoherent-instances #-}
+{-# LANGUAGE MultiParamTypeClasses, FunctionalDependencies, TypeSynonymInstances, FlexibleInstances, UndecidableInstances, ScopedTypeVariables, IncoherentInstances #-}
 
 {-|
     Class meta-model.  (object meta-meta-model)

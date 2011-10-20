@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -cpp -fno-warn-unused-binds -fno-warn-unused-imports -fallow-overlapping-instances -optc-DSTABLE_H -optc-w #-}
+{-# LANGUAGE CPP, ForeignFunctionInterface #-}
 
 module Pugs.Run.Perl5 () where
 

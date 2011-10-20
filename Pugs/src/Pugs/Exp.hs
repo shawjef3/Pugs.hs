@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fallow-undecidable-instances -fallow-overlapping-instances -cpp #-}
+{-# LANGUAGE DeriveDataTypeable #-}
 {-! global : YAML_Pos, Perl6Class, MooseClass !-}
 
 {-| Capture-enabled "new" Pugs AST

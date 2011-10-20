@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -cpp -optc-w #-}
+{-# LANGUAGE CPP, ForeignFunctionInterface, DeriveDataTypeable #-}
 
 #ifndef PUGS_HAVE_PERL5
 module Pugs.Embed.Perl5 
@@ -177,8 +177,9 @@ nullEnv = error "perl5 not embedded"
 #else
 #undef RETURN
 
-{-# INCLUDE "../../perl5/p5embed.h" #-}
-{-# INCLUDE "../../perl5/pugsembed.h" #-}
+-- XXXXXX
+--{-# INCLUDE "../../perl5/p5embed.h" #-}
+--{-# INCLUDE "../../perl5/pugsembed.h" #-}
 
 module Pugs.Embed.Perl5 where
 import Pugs.Internals

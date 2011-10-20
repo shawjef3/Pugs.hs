@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fallow-undecidable-instances -fallow-overlapping-instances -fno-warn-missing-methods -cpp #-}
+{-# LANGUAGE ScopedTypeVariables, TypeSynonymInstances, MultiParamTypeClasses, DeriveDataTypeable, GeneralizedNewtypeDeriving #-}
 {-|
     Perl 6 Values.
 

@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fno-warn-deprecations #-}
+{-# LANGUAGE TypeSynonymInstances #-}
 
 module Pugs.Meta.Str (_StrClass) where
 import Data.Maybe

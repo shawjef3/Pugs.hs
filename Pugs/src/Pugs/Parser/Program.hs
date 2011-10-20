@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts #-}
+{-# LANGUAGE PatternGuards #-}
 module Pugs.Parser.Program (
     -- Before you would import Pugs.Parser, now you import Pugs.Parser.Program.
     parseProgram,

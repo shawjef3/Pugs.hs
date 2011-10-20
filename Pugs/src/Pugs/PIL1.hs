@@ -1,4 +1,5 @@
-{-# OPTIONS_GHC -fglasgow-exts -funbox-strict-fields -fallow-overlapping-instances -fno-warn-orphans -fno-warn-incomplete-patterns -fallow-undecidable-instances -cpp #-}
+{-# OPTIONS_GHC -funbox-strict-fields #-}
+{-# LANGUAGE DeriveDataTypeable #-}
 
 {-|
     Pugs Intermediate Language, version 1.

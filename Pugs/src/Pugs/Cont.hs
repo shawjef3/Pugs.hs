@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fno-warn-unused-binds #-}
+{-# LANGUAGE RankNTypes, ScopedTypeVariables #-}
 
 {-|
     Continuation with shift and reset operators.

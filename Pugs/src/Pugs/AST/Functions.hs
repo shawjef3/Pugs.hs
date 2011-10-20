@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fno-warn-orphans -fallow-overlapping-instances -fallow-undecidable-instances -fparr #-}
+{-# LANGUAGE TypeSynonymInstances, MultiParamTypeClasses #-}
 module Pugs.AST.Functions where
 import Pugs.Internals
 import Pugs.Types

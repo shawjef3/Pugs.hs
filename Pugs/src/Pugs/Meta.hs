@@ -1,5 +1,3 @@
-{-# OPTIONS_GHC -fglasgow-exts #-}
-
 {-|
     Perl 6 Meta-object definitions.
 

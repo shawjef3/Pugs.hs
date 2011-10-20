@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fno-warn-orphans #-}
+{-# LANGUAGE RankNTypes, PatternGuards #-}
 
 module Pugs.Prim.Numeric (
     op2Numeric, op1Floating, op1Round, op1Numeric,

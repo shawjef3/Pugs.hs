@@ -1,5 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fparr #-}
-{-# LANGUAGE GADTs #-}
+{-# LANGUAGE GADTs, ScopedTypeVariables, PatternGuards #-}
 module Pugs.AST.Pad (
   mkPad, unionPads, padKeys, filterPad, adjustPad, mergePadEntry,
   mergeLexPads, readMPad, writeMPad, appendMPad, modifyMPad, newMPad

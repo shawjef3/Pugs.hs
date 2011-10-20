@@ -1,6 +1,7 @@
-{-# INCLUDE "Parrot_hsc.h" #-}
+-- XXXXXX
+--{-# INCLUDE "Parrot_hsc.h" #-}
 {-# LINE 1 "Parrot.hsc" #-}
-{-# OPTIONS_GHC -fglasgow-exts -cpp -fno-full-laziness -fno-cse #-}
+--{-# OPTIONS_GHC -fglasgow-exts -cpp -fno-full-laziness -fno-cse #-}
 {-# LINE 2 "Parrot.hsc" #-}
 
 {-# LINE 3 "Parrot.hsc" #-}

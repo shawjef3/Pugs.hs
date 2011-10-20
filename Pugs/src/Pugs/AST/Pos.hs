@@ -1,4 +1,5 @@
-{-# OPTIONS_GHC -cpp -fglasgow-exts -fno-warn-orphans -funbox-strict-fields #-}
+{-# OPTIONS_GHC -funbox-strict-fields #-}
+{-# LANGUAGE DeriveDataTypeable #-}
 
 module Pugs.AST.Pos (
     Pos(..),

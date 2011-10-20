@@ -1,4 +1,5 @@
-{-# OPTIONS_GHC -fglasgow-exts -fno-warn-orphans -funbox-strict-fields -fallow-overlapping-instances #-}
+{-# OPTIONS_GHC -funbox-strict-fields #-}
+{-# LANGUAGE MultiParamTypeClasses, FlexibleContexts, TypeSynonymInstances #-}
 module Pugs.AST where
 import Pugs.Internals
 import Pugs.Types

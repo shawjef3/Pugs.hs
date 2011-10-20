@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fno-warn-orphans #-}
+{-# LANGUAGE RankNTypes #-}
 
 module Pugs.Prim.Lifts (
   op1Cast, op2Cast,

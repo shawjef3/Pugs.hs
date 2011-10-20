@@ -1,4 +1,3 @@
-{-# OPTIONS_GHC -fglasgow-exts -fno-warn-orphans #-}
 {-# LANGUAGE GADTs #-}
 
 module Pugs.Prim.Keyed (

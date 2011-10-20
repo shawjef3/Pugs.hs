@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts #-}
+{-# LANGUAGE MultiParamTypeClasses, TypeSynonymInstances, DeriveDataTypeable, PatternGuards #-}
 
 module Pugs.Meta.Perl5 (Perl5Responder) where
 import Pugs.Val

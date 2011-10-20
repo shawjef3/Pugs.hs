@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -cpp -fallow-overlapping-instances #-}
+{-# LANGUAGE PatternGuards #-}
 
 {-|
     External call utilities.

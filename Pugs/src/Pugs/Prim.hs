@@ -1,5 +1,5 @@
-{-# OPTIONS_GHC -fglasgow-exts -fno-warn-orphans -fno-full-laziness -fno-cse -fallow-overlapping-instances #-}
-{-# LANGUAGE GADTs #-}
+{-# OPTIONS_GHC -fno-full-laziness -fno-cse #-}
+{-# LANGUAGE GADTs, MagicHash, PatternGuards, ScopedTypeVariables, ImplicitParams, RankNTypes, DeriveDataTypeable, FlexibleContexts #-}
 
 {-|
     Primitive operators.

@@ -1,4 +1,5 @@
-{-# OPTIONS_GHC -fglasgow-exts -funbox-strict-fields -fno-full-laziness -fno-cse #-}
+{-# OPTIONS_GHC -funbox-strict-fields -fno-full-laziness -fno-cse #-}
+{-# LANGUAGE PatternGuards #-}
 
 module Pugs.Parser.Doc (
     ruleDocBlock,

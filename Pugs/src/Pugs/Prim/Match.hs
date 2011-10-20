@@ -1,5 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fno-warn-orphans -fallow-overlapping-instances #-}
-{-# LANGUAGE GADTs #-}
+{-# LANGUAGE GADTs, ScopedTypeVariables, PatternGuards #-}
 
 module Pugs.Prim.Match (
     op2Match, rxSplit, rxSplit_n, pkgParents, pkgParentClasses

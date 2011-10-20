@@ -1,5 +1,4 @@
-{-# OPTIONS_GHC -cpp -fglasgow-exts -fno-warn-orphans -fallow-overlapping-instances -fallow-undecidable-instances -fparr #-}
-{-# LANGUAGE GADTs #-}
+{-# LANGUAGE CPP, GADTs, RankNTypes, TypeSynonymInstances, FlexibleInstances, DeriveDataTypeable, ScopedTypeVariables, PatternGuards #-}
 
 module Pugs.AST.Internals (
     Eval(..),      -- uses Val, Env, SIO

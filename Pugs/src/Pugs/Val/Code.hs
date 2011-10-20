@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fallow-undecidable-instances -fallow-overlapping-instances -fno-warn-missing-methods #-}
+{-# LANGUAGE ParallelListComp, DeriveDataTypeable #-}
 module Pugs.Val.Code where
 import Pugs.Internals
 import Pugs.Types

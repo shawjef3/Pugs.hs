@@ -1,5 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fallow-overlapping-instances #-}
-
+{-# LANGUAGE PatternGuards #-}
 module Pugs.Prim.Param (
     foldParam
 ) where

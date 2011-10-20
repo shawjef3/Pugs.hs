@@ -1,5 +1,3 @@
-{-# OPTIONS_GHC -fglasgow-exts #-}
-
 module Pugs.Meta.Class () where
 import Pugs.Val
 import Pugs.Class

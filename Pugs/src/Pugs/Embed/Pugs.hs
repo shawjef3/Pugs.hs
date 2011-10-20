@@ -1,5 +1,3 @@
-{-# OPTIONS_GHC -fglasgow-exts #-}
-
 module Pugs.Embed.Pugs where
 import System.Cmd
 import System.Directory

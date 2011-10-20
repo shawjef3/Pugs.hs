@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fglasgow-exts -fallow-undecidable-instances -fno-warn-orphans -funbox-strict-fields -cpp #-}
+{-# OPTIONS_GHC -funbox-strict-fields #-}
 
 module Pugs.CodeGen.JSON (genJSON) where
 import Pugs.AST

@@ -1,4 +1,5 @@
-{-# OPTIONS_GHC -cpp -fglasgow-exts -funbox-strict-fields -fno-full-laziness -fno-cse -fallow-overlapping-instances #-}
+{-# OPTIONS_GHC -funbox-strict-fields -fno-full-laziness -fno-cse #-}
+{-# LANGUAGE ParallelListComp, ScopedTypeVariables, ScopedTypeVariables, PatternGuards #-}
 
 {-|
     Higher-level parser for building ASTs.
