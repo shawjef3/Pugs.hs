@@ -29,6 +29,7 @@ import Data.List
 import qualified Unlit
 import Control.Monad
 import GenUtil
+import System.IO.Error
 
 try x = catch (x >>= return . Right) (return . Left)
 
@@ -90,7 +91,7 @@ breakPaths x = case break (==':') x of
 -- search though paths, using try
 findModule :: [String] -> String -> IO String
 findModule paths modname = let
-	action p = try $ do
+	action p = tryIOError $ do
 			    h <- readFile p
  	                    return (h,p,".lhs" `isSuffixOf` p)
 	fnames = combine paths modname

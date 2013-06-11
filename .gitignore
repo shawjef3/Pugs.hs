@@ -3,3 +3,7 @@
 /Pugs/dist/
 /Pugs/perlxsi.c
 /Pugs/pugs
+*.o
+*.hi
+*.a
+dist

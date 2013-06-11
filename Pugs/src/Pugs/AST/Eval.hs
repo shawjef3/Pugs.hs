@@ -3,8 +3,7 @@
 module Pugs.AST.Eval where
 import Pugs.Internals
 import Pugs.Cont hiding (resetT)
-import System.IO.Error (try, IOError)
-import Control.Exception (SomeException)
+import System.IO.Error (IOError, tryIOError, catchIOError)
 
 import Pugs.AST.SIO
 import {-# SOURCE #-} Pugs.AST.Internals
@@ -32,7 +31,7 @@ runEvalIO :: Env -> Eval Val -> IO Val
 runEvalIO env = fmap liftResult . runIO . (`runReaderT` env) . (`runContT` return) . runEvalT
 
 tryIO :: a -> IO a -> Eval a
-tryIO err = liftEval . io . (`catchIO` (\(e :: SomeException) -> return err))
+tryIO err = liftEval . io . (`catchIOError` (\e -> return err))
 
 {-|
 'shiftT' is like @callCC@, except that when you activate the continuation
@@ -154,7 +153,7 @@ Perform an IO action and raise an exception if it fails.
 -}
 guardIO :: IO a -> Eval a
 guardIO x = do
-    rv <- io $ try x
+    rv <- io $ tryIOError x
     case rv of
         Left e -> fail (show e)
         Right v -> return v
@@ -167,7 +166,7 @@ supress the exception and return an associated value instead.
 -}
 guardIOexcept :: MonadIO m => [((IOError -> Bool), a)] -> IO a -> m a
 guardIOexcept safetyNet x = do
-    rv <- io $ try x
+    rv <- io $ tryIOError x
     case rv of
         Right v -> return v
         Left  e -> catcher e safetyNet
@@ -179,7 +178,7 @@ guardIOexcept safetyNet x = do
 
 guardSTM :: STM a -> Eval a
 guardSTM x = do
-    rv <- stm $ fmap Right x `catchSTM` (\(e :: SomeException) -> return (Left e))
+    rv <- stm $ fmap Right x `catchSTM` (\e -> return (Left e))
     case rv of
         Left e -> fail (show e)
         Right v -> return v

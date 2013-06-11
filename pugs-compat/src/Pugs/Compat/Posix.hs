@@ -54,6 +54,7 @@ import Foreign
 import System.Cmd
 import System.Posix.Types
 import Data.Time
+import System.IO.Error
 
 #ifdef PUGS_HAVE_POSIX
 import System.Posix.Files
@@ -75,7 +76,7 @@ doesExist :: FilePath -> IO Bool
 doesExist = fileExist
 
 testStatusWith :: (FileStatus -> Bool) -> FilePath -> IO Bool
-testStatusWith t f = fmap t (getFileStatus f) `catch` const (return False)
+testStatusWith t f = fmap t (getFileStatus f) `catchIOError` const (return False)
 
 doesFileExist :: FilePath -> IO Bool
 doesFileExist = testStatusWith isRegularFile

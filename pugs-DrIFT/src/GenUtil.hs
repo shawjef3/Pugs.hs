@@ -101,6 +101,7 @@ import qualified System.Environment as System
 import qualified System.Exit as System
 import System.Random(StdGen, newStdGen, Random(randomR))
 import System.Time
+import System.IO.Error
 
 {-# SPECIALIZE snub :: [String] -> [String] #-}
 {-# SPECIALIZE snub :: [Int] -> [Int] #-}
@@ -285,11 +286,13 @@ rights xs = [x | Right x <- xs]
 lefts :: [Either a b] -> [a]
 lefts xs = [x | Left x <- xs]
 
+--Does the following need to catch all exceptions, or just IO exceptions?
 ioM :: Monad m => IO a -> IO (m a)
-ioM action = catch (fmap return action) (\e -> return (fail (show e)))
+ioM action = catchIOError (fmap return action) (\e -> return (fail (show e)))
 
+--Does the following need to catch all exceptions, or just IO exceptions?
 ioMp :: MonadPlus m => IO a -> IO (m a)
-ioMp action = catch (fmap return action) (\_ -> return mzero)
+ioMp action = catchIOError (fmap return action) (const (return mzero))
 
 -- | reformat a string to not be wider than a given width, breaking it up
 -- between words.
